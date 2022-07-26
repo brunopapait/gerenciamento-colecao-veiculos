@@ -7,6 +7,8 @@ O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado 
 # Endereço de Deploy - GitHub Pages
 # Protótipo
 
+https://www.figma.com/file/PgmZ38i2pZfmEfD6lj2LHf/MEUSVEICULOS?node-id=0%3A1
+
 # Checklist
 
 - [x] Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop.

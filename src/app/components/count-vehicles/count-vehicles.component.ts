@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./count-vehicles.component.css']
 })
 export class CountVehiclesComponent implements OnInit {
-
-  constructor() { }
+  quantidadeVeiculosCadastrados: number;
+  constructor() {
+    this.quantidadeVeiculosCadastrados = 0;
+  }
 
   ngOnInit(): void {
   }

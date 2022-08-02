@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { CountVehiclesComponent } from './count-vehicles/count-vehicles.component';
+import { HeaderComponent } from './components/header/header.component';
+import { CountVehiclesComponent } from './components/count-vehicles/count-vehicles.component';
 
 @NgModule({
   declarations: [

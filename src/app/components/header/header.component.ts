@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  firstNameHeader: string;
+  secondNameHeader: string;
+  constructor() {
+    this.firstNameHeader = 'Meus';
+    this.secondNameHeader = 'Veiculos';
+   }
 
   ngOnInit(): void {
   }

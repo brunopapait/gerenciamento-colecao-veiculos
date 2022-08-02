@@ -1,0 +1,13 @@
+.btn-register {
+  font-size: 30px;
+  height: 50px;
+  color: white;
+  background-color: #4E41F0;
+}
+
+@media screen and (max-width: 400px) {
+  .btn-register {
+    font-size: 40px;
+    width: 100%;
+  }
+}

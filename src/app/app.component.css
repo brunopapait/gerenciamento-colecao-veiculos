@@ -3,4 +3,10 @@ div {
   max-width: 500px;
   margin: 0 auto;
   padding: 0 16px;
+  height: 95%;
+}
+
+main {
+  height: 85%;
+  background-color: pink;
 }

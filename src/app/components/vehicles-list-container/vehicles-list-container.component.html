@@ -1,0 +1,6 @@
+<div class="body">
+  <div class="vehicle-item" *ngFor="let vehicle of vehicles">
+    <h1>{{vehicle}}</h1>
+    <button (click)="handleClick(vehicle)">Editar</button>
+  </div>
+</div>

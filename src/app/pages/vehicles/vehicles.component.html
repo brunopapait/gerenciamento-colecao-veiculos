@@ -1,0 +1,7 @@
+<header>
+  <app-sub-header [qtVehicles]="qtVehicles"></app-sub-header>
+</header>
+
+<body class="body-container">
+  <app-vehicles-list-container (qtVehicles)="qtVehicles=$event"></app-vehicles-list-container>
+</body>

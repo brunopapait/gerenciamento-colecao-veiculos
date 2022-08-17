@@ -1,1 +1,76 @@
-<button type="button" mat-button class="btn-register" [routerLink]="['/vehicles']">Voltar</button>
+<div class="body-container">
+  <form id="form-vehicles" #form="ngForm" (submit)="onSubmit()">
+    <div class="container-form-groups">
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Identificador</mat-label>
+          <input matInput placeholder="Identificador" id="input-identificador" name="input-identificador" type="text"
+            [(ngModel)]="this.vehicle.identificador" #name="ngModel" required>
+          <!-- <mat-error *ngIf="identificador.invalid">{{getErrorMessage()}}</mat-error> -->
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Status</mat-label>
+          <mat-select value="ativo">
+            <mat-option value="ativo">Ativo</mat-option>
+            <mat-option value="inativo">Inativo</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Placa</mat-label>
+          <input matInput placeholder="Placa">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Cor</mat-label>
+          <input matInput placeholder="Cor">
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Marca</mat-label>
+          <input matInput placeholder="Marca">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Modelo</mat-label>
+          <input matInput placeholder="Modelo">
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Valor</mat-label>
+          <input matInput placeholder="Valor">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Km atual</mat-label>
+          <input matInput placeholder="Km atual">
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Ano fabricação</mat-label>
+          <input matInput placeholder="Ano da fabricação">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Ano modelo</mat-label>
+          <input matInput placeholder="Ano do modelo">
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Data compra</mat-label>
+          <input matInput placeholder="Data da compra">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Data venda</mat-label>
+          <input matInput placeholder="Data da venda">
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+</div>

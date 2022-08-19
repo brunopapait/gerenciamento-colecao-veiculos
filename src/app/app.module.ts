@@ -6,6 +6,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,7 +36,8 @@ import { VehiclesListContainerComponent } from './components/vehicles-list-conta
     MatButtonModule,
     MatInputModule,
     BrowserAnimationsModule,
-    MatSelectModule
+    MatSelectModule,
+    CurrencyMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]

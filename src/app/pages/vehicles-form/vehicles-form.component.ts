@@ -11,26 +11,23 @@ import { NgForm } from '@angular/forms';
 export class VehiclesFormComponent implements OnInit {
   @ViewChild('form') form!: NgForm;
 
-  vehicle: Vehicle = new Vehicle('', '', '', '', '', '', 0, 0, 0, 0, new Date(), new Date());
+  vehicle!: Vehicle;
   idVehicle: number = 0;
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
 
     this.activatedRoute.params.subscribe(({id}) => this.idVehicle = id);
-    if (!this.idVehicle) return;
+    if (!this.idVehicle) {
+       this.vehicle = new Vehicle(Math.floor(Math.random() * 2525).toString(), 'ativo', '', '', '', '', 0, 0, 2022, 2022);
+       return;
+    };
 
     alert(this.idVehicle);
   }
 
   onSubmit() {
-  }
-
-  getErrorMessage() {
-    // if (this.email.hasError('required')) {
-    //   return 'You must enter a value';
-    // }
-
-    // return this.email.hasError('email') ? 'Not a valid email' : '';
+    //Salva o objeto no localStorage
+    localStorage.setItem('vehicle', JSON.stringify(this.vehicle));
   }
 }

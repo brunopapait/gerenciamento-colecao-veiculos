@@ -5,6 +5,7 @@ import { FormsModule }   from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
 
@@ -17,6 +18,7 @@ import { SubHeaderComponent } from './components/sub-header/sub-header.component
 import { VehiclesComponent } from './pages/vehicles/vehicles.component';
 import { VehiclesFormComponent } from './pages/vehicles-form/vehicles-form.component';
 import { VehiclesListContainerComponent } from './components/vehicles-list-container/vehicles-list-container.component';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { VehiclesListContainerComponent } from './components/vehicles-list-conta
     VehiclesComponent,
     VehiclesFormComponent,
     VehiclesListContainerComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { VehiclesListContainerComponent } from './components/vehicles-list-conta
     MatInputModule,
     BrowserAnimationsModule,
     MatSelectModule,
-    CurrencyMaskModule
+    CurrencyMaskModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -84,7 +84,7 @@
     <div class="form-group-button">
       <div class="wrapper-buttons">
         <button mat-raised-button class="btn-salvar" [disabled]="!form.valid" type="submit">Salvar</button>
-        <button mat-raised-button class="btn-cancelar" type="button">Cancelar</button>
+        <button mat-raised-button class="btn-cancelar" type="button" (click)="handleCancel()">Cancelar</button>
       </div>
     </div>
   </form>

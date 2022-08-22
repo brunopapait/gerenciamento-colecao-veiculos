@@ -1,0 +1,91 @@
+<div class="body-container">
+  <form id="form-vehicles" #form="ngForm" (submit)="onSubmit()">
+    <div class="container-form-groups">
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Identificador</mat-label>
+          <input matInput placeholder="Identificador" id="input-identificador" name="input-identificador" type="text"
+            [(ngModel)]="this.vehicle.identificador" #identificador="ngModel" disabled>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Status</mat-label>
+          <mat-select [(value)]="this.vehicle.status" required>
+            <mat-option value="ativo">Ativo</mat-option>
+            <mat-option value="inativo">Inativo</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Placa</mat-label>
+          <input id="input-placa" name="input-placa" type="text" pattern="[A-Z]{3}[0-9][0-9A-Z][0-9]{2}"
+            #placa="ngModel" matInput minlength="7" maxlength="7" placeholder="Placa" [(ngModel)]="this.vehicle.placa"
+            (ngModelChange)="this.vehicle.placa = $event.toUpperCase()" required>
+          <mat-error *ngIf="placa.invalid">Placa inválida</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Cor</mat-label>
+          <input minlength="3" id="input-cor" name="input-cor" type="text" #cor="ngModel" matInput placeholder="Cor"
+            [(ngModel)]="this.vehicle.cor" required>
+          <mat-error *ngIf="cor.invalid">Cor inválida</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Marca</mat-label>
+          <input minlength="1" id="input-marca" name="input-marca" type="text" #marca="ngModel" matInput
+            placeholder="Marca" [(ngModel)]="this.vehicle.marca" required>
+          <mat-error *ngIf="marca.invalid">Marca inválida</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Modelo</mat-label>
+          <input minlength="1" id="input-modelo" name="input-modelo" type="text" #modelo="ngModel" matInput
+            placeholder="Modelo" [(ngModel)]="this.vehicle.modelo" required>
+          <mat-error *ngIf="modelo.invalid">Modelo inválida</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Valor</mat-label>
+          <input currencyMask id="input-valor" name="input-valor" type="text" #valor="ngModel" matInput
+            placeholder="Valor" [(ngModel)]="this.vehicle.valor" required
+            [options]="{prefix: 'R$ ', thousands: '.', decimal: ',', precision: 2}">
+          <mat-error *ngIf="valor.invalid">Valor inválido</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Km atual</mat-label>
+          <input matInput placeholder="Km atual" id="input-km" name="input-km" type="number" #km="ngModel" min="0"
+            [(ngModel)]="this.vehicle.kmAtual" required>
+          <mat-error *ngIf="km.invalid">Km inválido</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Ano fabricação</mat-label>
+          <input matInput placeholder="Ano da fabricação" type="text" id="input-anoFabricacao"
+            name="input-anoFabricacao" #anoFabricacao="ngModel" pattern="^[0-9]*\d+[0-9]*$" minlength="4" maxlength="4"
+            [(ngModel)]="this.vehicle.anoFabricacao" required>
+          <mat-error *ngIf="anoModelo.invalid">Ano de fabricação inválido</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Ano modelo</mat-label>
+          <input matInput placeholder="Ano do modelo" type="text" id="input-anoModelo" pattern="^[0-9]*\d+[0-9]*$"
+            minlength="4" maxlength="4" name="input-anoModelo" #anoModelo="ngModel" [(ngModel)]="this.vehicle.anoModelo"
+            required>
+          <mat-error *ngIf="anoModelo.invalid">Ano do modelo inválido</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="form-group-button">
+      <div class="wrapper-buttons">
+        <button mat-raised-button class="btn-salvar" [disabled]="!form.valid" type="submit">Salvar</button>
+        <button mat-raised-button class="btn-cancelar" type="button" (click)="handleCancel()">Cancelar</button>
+      </div>
+    </div>
+  </form>
+</div>

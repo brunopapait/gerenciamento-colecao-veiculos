@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-count-vehicles',
@@ -6,9 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./count-vehicles.component.css']
 })
 export class CountVehiclesComponent implements OnInit {
-  quantidadeVeiculosCadastrados: number;
+  @Input() qtVehicles: number = 0;
   constructor() {
-    this.quantidadeVeiculosCadastrados = 0;
   }
 
   ngOnInit(): void {

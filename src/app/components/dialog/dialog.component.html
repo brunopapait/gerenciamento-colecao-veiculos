@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="body">
+    <h1 mat-dialog-title>{{ data.title }}</h1>
+    <div mat-dialog-content>
+      {{data.subtitle}}
+    </div>
+  </div>
+  <div class="footer">
+    <div mat-dialog-actions>
+      <button mat-raised-button class="btn-cancelar" type="button" mat-dialog-close>Cancelar</button>
+      <button mat-raised-button class="btn-salvar" mat-dialog-close type="button"
+        (click)="data.fnAction()">Salvar</button>
+    </div>
+  </div>
+</div>

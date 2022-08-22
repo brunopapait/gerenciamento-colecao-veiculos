@@ -1,0 +1,7 @@
+.body-container {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: aliceblue;
+  height: 80%;
+}

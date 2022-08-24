@@ -19,6 +19,7 @@ import { VehiclesComponent } from './pages/vehicles/vehicles.component';
 import { VehiclesFormComponent } from './pages/vehicles-form/vehicles-form.component';
 import { VehiclesListContainerComponent } from './components/vehicles-list-container/vehicles-list-container.component';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { DialogComponent } from './components/dialog/dialog.component';
     BrowserAnimationsModule,
     MatSelectModule,
     CurrencyMaskModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,6 +20,7 @@ import { VehiclesFormComponent } from './pages/vehicles-form/vehicles-form.compo
 import { VehiclesListContainerComponent } from './components/vehicles-list-container/vehicles-list-container.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { HttpClientModule } from '@angular/common/http';
+import { VehicleItemDetailComponent } from './components/vehicles-list-container/vehicle-item-detail/vehicle-item-detail.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     VehiclesFormComponent,
     VehiclesListContainerComponent,
     DialogComponent,
+    VehicleItemDetailComponent,
   ],
   imports: [
     BrowserModule,

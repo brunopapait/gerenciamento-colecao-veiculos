@@ -19,7 +19,11 @@ export class VehiclesListContainerComponent implements OnInit, AfterViewInit {
    }
 
   async ngOnInit() {
-    this.vehicles = await this.vehicleService.findAll();
+    try {
+      this.vehicles = await this.vehicleService.findAll();
+    } catch (error) {
+      alert(error);
+    }
   }
 
   async ngAfterViewInit() {

@@ -1,0 +1,40 @@
+{
+  "vehicles": [
+    {
+      "id": 2,
+      "status": "inativo",
+      "placa": "DLT1549",
+      "cor": "Preta",
+      "marca": "Honda",
+      "modelo": "Titan 150 KS",
+      "valor": 3000,
+      "kmAtual": 32010,
+      "anoFabricacao": 2004,
+      "anoModelo": 2004
+    },
+    {
+      "id": 3,
+      "status": "ativo",
+      "placa": "BFR11A4",
+      "cor": "Branco",
+      "marca": "Honda",
+      "modelo": "HRV",
+      "valor": 110000,
+      "kmAtual": 6000,
+      "anoFabricacao": 2020,
+      "anoModelo": 2021
+    },
+    {
+      "status": "ativo",
+      "placa": "ACS22H9",
+      "cor": "Azul",
+      "marca": "BMW",
+      "modelo": "325i",
+      "valor": 150022,
+      "kmAtual": 321020,
+      "anoFabricacao": 2021,
+      "anoModelo": 2022,
+      "id": 4
+    }
+  ]
+}

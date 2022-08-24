@@ -1,6 +1,6 @@
 <div class="body">
   <div class="vehicle-item" *ngFor="let vehicle of vehicles">
-    <h1>{{vehicle}}</h1>
-    <button (click)="handleClick(vehicle)">Editar</button>
+    <h1>{{vehicle.cor}}</h1>
+    <button (click)="handleClick(+vehicle.id)">Editar</button>
   </div>
 </div>

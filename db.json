@@ -35,6 +35,18 @@
       "anoFabricacao": 2021,
       "anoModelo": 2022,
       "id": 4
+    },
+    {
+      "id": "408",
+      "status": "ativo",
+      "placa": "BFF9696",
+      "cor": "Verde",
+      "marca": "Fiat",
+      "modelo": "Uno",
+      "valor": 1252,
+      "kmAtual": 123555,
+      "anoFabricacao": "2002",
+      "anoModelo": "2003"
     }
   ]
 }

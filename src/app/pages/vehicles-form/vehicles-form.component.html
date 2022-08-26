@@ -5,7 +5,7 @@
         <mat-form-field appearance="outline">
           <mat-label>Identificador</mat-label>
           <input matInput placeholder="Identificador" id="input-identificador" name="input-identificador" type="text"
-            [(ngModel)]="this.vehicle.identificador" #identificador="ngModel" disabled>
+            [(ngModel)]="this.vehicle.id" #identificador="ngModel" disabled>
         </mat-form-field>
         <mat-form-field appearance="outline">
           <mat-label>Status</mat-label>
@@ -83,8 +83,8 @@
 
     <div class="form-group-button">
       <div class="wrapper-buttons">
-        <button mat-raised-button class="btn-salvar" [disabled]="!form.valid" type="submit">Salvar</button>
-        <button mat-raised-button class="btn-cancelar" type="button" (click)="handleCancel()">Cancelar</button>
+        <button mat-raised-button class="btn-salvar btn" [disabled]="!form.valid" type="submit">Salvar</button>
+        <button mat-raised-button class="btn-cancelar btn" type="button" (click)="handleCancel()">Cancelar</button>
       </div>
     </div>
   </form>

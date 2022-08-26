@@ -1,5 +1,5 @@
 export class Vehicle {
-  identificador!: string;
+  id!: string;
   status!: string;
   placa!: string;
   cor!: string;
@@ -10,8 +10,8 @@ export class Vehicle {
   anoFabricacao!: number;
   anoModelo!: number;
 
-  constructor(identificador: string, status: string, placa: string, cor: string, marca: string, modelo: string, valor: number, kmAtual: number, anoFabricacao: number, anoModelo: number) {
-    this.identificador = identificador;
+  constructor(id: string, status: string, placa: string, cor: string, marca: string, modelo: string, valor: number, kmAtual: number, anoFabricacao: number, anoModelo: number) {
+    this.id = id;
     this.status = status;
     this.placa = placa;
     this.cor = cor;

@@ -1,22 +1,27 @@
 import { AfterViewInit, Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { Vehicle } from 'src/app/model/Vehicle';
+import { VehicleService } from 'src/app/services/vehicle.service';
 
 @Component({
   selector: 'app-vehicles-list-container',
   templateUrl: './vehicles-list-container.component.html',
-  styleUrls: ['./vehicles-list-container.component.css']
+  styleUrls: ['./vehicles-list-container.component.css'],
+  providers: [VehicleService]
 })
 export class VehiclesListContainerComponent implements OnInit, AfterViewInit {
-  vehicles: String[];
+  vehicles: Vehicle[];
 
   @Output() qtVehicles = new EventEmitter<number>();
 
-  constructor(private router: Router) {
-    this.vehicles = ['Palio', 'Vectra', 'Azera', 'HB20'];
+  constructor(private router: Router, private vehicleService: VehicleService) {
+    this.vehicles = [];
    }
 
-  ngOnInit(): void {
-
+  async ngOnInit() {
+      this.vehicleService.findAll()
+      .then((vehicles) => this.vehicles = vehicles)
+      .catch((err) => alert(err));
   }
 
   async ngAfterViewInit() {
@@ -24,8 +29,10 @@ export class VehiclesListContainerComponent implements OnInit, AfterViewInit {
     this.qtVehicles.next(this.vehicles.length);
   }
 
-  handleClick(vehicle: String){
-    this.router.navigateByUrl(`/vehicles/edit/${vehicle}`);
+  handleEditClick(vehicleId: number){
+    this.router.navigateByUrl(`/vehicles/edit/${vehicleId}`);
   }
+
+  handleRemoveClick(vehicleId: number){}
 
 }

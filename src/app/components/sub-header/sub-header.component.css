@@ -3,10 +3,27 @@ div {
   justify-content: space-between;
   align-items: center;
   display: flex;
+  flex-direction: column;
+}
+
+.info-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 @media screen and (max-width: 400px) {
   div {
     flex-direction: column;
   }
+}
+
+.divider {
+  height: 2px;
+  background-color: #BCBCBC;
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 5px;
 }

@@ -47,6 +47,18 @@
       "kmAtual": 123555,
       "anoFabricacao": "2002",
       "anoModelo": "2003"
+    },
+    {
+      "status": "inativo",
+      "placa": "ACS22H9",
+      "cor": "Azul",
+      "marca": "BMW",
+      "modelo": "320i",
+      "valor": 150022,
+      "kmAtual": 321020,
+      "anoFabricacao": 2021,
+      "anoModelo": 2022,
+      "id": "KyJ6iuo"
     }
   ]
 }

@@ -1,6 +1,34 @@
 <div class="body">
   <div class="vehicle-item" *ngFor="let vehicle of vehicles">
-    <h1>{{vehicle}}</h1>
-    <button (click)="handleClick(vehicle)">Editar</button>
+    <div class="container-card-item">
+      <div class="container-detail-status"
+        [style.background-color]="vehicle.status === 'ativo' ? '#4E41F0' : '#E44C4E'"></div>
+      <div class="container-detail-vehicle">
+        <div class="title">
+          <span>{{vehicle.placa}}</span>
+          <div class="wrapper-action-button">
+            <img class="icon icon-edit" src="assets/edit.svg" alt="Botão de editar veículo"
+              (click)="handleEditClick(+vehicle.id)">
+            <img class="icon" src="assets/trash.svg" alt="Botão de remover veículo"
+              (click)="handleRemoveClick(+vehicle.id)">
+          </div>
+        </div>
+        <div class="half-container">
+          <app-vehicle-item-detail [title]="'MODELO'" [subtitle]="vehicle.modelo"></app-vehicle-item-detail>
+          <app-vehicle-item-detail [title]="'MARCA'" [subtitle]="vehicle.marca"></app-vehicle-item-detail>
+          <app-vehicle-item-detail [title]="'COR'" [subtitle]="vehicle.cor"></app-vehicle-item-detail>
+          <app-vehicle-item-detail [title]="'VALOR'" [subtitle]="vehicle.valor"></app-vehicle-item-detail>
+        </div>
+        <div class="half-container">
+          <app-vehicle-item-detail [title]="'KM ATUAL'" [subtitle]="vehicle.kmAtual"></app-vehicle-item-detail>
+          <app-vehicle-item-detail [title]="'ANO FABRICAÇÃO'" [subtitle]="vehicle.anoFabricacao">
+          </app-vehicle-item-detail>
+          <app-vehicle-item-detail [title]="'ANO MODELO'" [subtitle]="vehicle.anoModelo"></app-vehicle-item-detail>
+          <app-vehicle-item-detail [title]="'STATUS'" [subtitle]="vehicle.status.toUpperCase()">
+          </app-vehicle-item-detail>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>

@@ -6,7 +6,12 @@
       <div class="container-detail-vehicle">
         <div class="title">
           <span>{{vehicle.placa}}</span>
-          <button (click)="handleClick(+vehicle.id)">Editar</button>
+          <div class="wrapper-action-button">
+            <img class="icon icon-edit" src="assets/edit.svg" alt="Botão de editar veículo"
+              (click)="handleEditClick(+vehicle.id)">
+            <img class="icon" src="assets/trash.svg" alt="Botão de remover veículo"
+              (click)="handleRemoveClick(+vehicle.id)">
+          </div>
         </div>
         <div class="half-container">
           <app-vehicle-item-detail [title]="'MODELO'" [subtitle]="vehicle.modelo"></app-vehicle-item-detail>
@@ -25,7 +30,5 @@
       </div>
 
     </div>
-    <!-- <h1>{{vehicle.placa}}</h1>
-    <button (click)="handleClick(+vehicle.id)">Editar</button> -->
   </div>
 </div>

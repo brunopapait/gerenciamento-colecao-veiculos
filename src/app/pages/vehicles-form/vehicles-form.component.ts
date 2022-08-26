@@ -41,16 +41,13 @@ export class VehiclesFormComponent implements OnInit {
   }
 
   async saveVehicle() {
-    try {
       //Salva o objeto no localStorage
       // localStorage.setItem('vehicle', JSON.stringify(this.vehicle));
 
       //Salva o objeto no Json-Server
-      await this.vehicleService.save(this.vehicle);
-      this.location.back();
-    } catch (error) {
-      alert(error);
-    }
+      this.vehicleService.save(this.vehicle)
+      .then(() => this.location.back())
+      .catch((err) => alert(err));
   }
 
   handleCancel() {

@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  background-color: aliceblue;
+  background-color: whitesmoke;
   height: 100%;
   padding: 14px 10px;
+  border-radius: 5px;
 }
 
 .container-form-groups {
@@ -29,9 +30,13 @@
 }
 
 .wrapper-buttons {
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
+}
+
+.btn {
+  width: 200px;
 }
 
 .btn-salvar {
@@ -46,4 +51,5 @@
 
 mat-form-field.mat-form-field {
   font-size: 13px;
+  width: 49%;
 }

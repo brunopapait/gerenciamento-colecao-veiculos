@@ -19,11 +19,9 @@ export class VehiclesListContainerComponent implements OnInit, AfterViewInit {
    }
 
   async ngOnInit() {
-    try {
-      this.vehicles = await this.vehicleService.findAll();
-    } catch (error) {
-      alert(error);
-    }
+      this.vehicleService.findAll()
+      .then((vehicles) => this.vehicles = vehicles)
+      .catch((err) => alert(err));
   }
 
   async ngAfterViewInit() {
@@ -31,8 +29,10 @@ export class VehiclesListContainerComponent implements OnInit, AfterViewInit {
     this.qtVehicles.next(this.vehicles.length);
   }
 
-  handleClick(vehicleId: number){
+  handleEditClick(vehicleId: number){
     this.router.navigateByUrl(`/vehicles/edit/${vehicleId}`);
   }
+
+  handleRemoveClick(vehicleId: number){}
 
 }

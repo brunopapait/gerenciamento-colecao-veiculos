@@ -5,6 +5,25 @@
   margin: 0px 8px;
 }
 
+app-vehicle-item-detail {
+  width: 25%;
+}
+
+.wrapper-action-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.icon-edit {
+  margin-right: 8px;
+}
+
 .container-card-item {
   margin-top: 2px;
   display: flex;
@@ -18,7 +37,6 @@
 .container-detail-status {
   width: 5px;
   border-radius: 4px 0px 0px 4px;
-  background-color: bisque;
 }
 
 .container-detail-vehicle {

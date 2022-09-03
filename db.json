@@ -13,16 +13,16 @@
       "anoModelo": 2022
     },
     {
-      "id": "724",
+      "id": "25",
       "status": "inativo",
-      "placa": "BBS0003",
-      "cor": "Branco",
+      "placa": "BRA3H66",
+      "cor": "Preta",
       "marca": "Honda",
-      "modelo": "Fiesta",
-      "valor": 85.69,
-      "kmAtual": 145858,
-      "anoFabricacao": 2022,
-      "anoModelo": 2022
+      "modelo": "Teste",
+      "valor": 14523.65,
+      "kmAtual": 12533,
+      "anoFabricacao": "2011",
+      "anoModelo": "2012"
     }
   ]
 }

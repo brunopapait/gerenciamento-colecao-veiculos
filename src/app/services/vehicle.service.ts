@@ -44,4 +44,8 @@ export class VehicleService {
       throw new Error(err)
     }));
   }
+
+  async remove(vehicleId: string) {
+    return this.httpClient.delete<void>(`${this.URI}/${vehicleId}`).toPromise();
+  }
 }

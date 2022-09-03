@@ -13,9 +13,4 @@ export class ButtonRegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  handleClickButtonRegister() {
-    alert('Botão de cadastrar clicado !');
-  }
-
 }

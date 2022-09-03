@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class VehicleItemDetailComponent implements OnInit {
   @Input() title: string = '';
-  @Input() subtitle: string | number = '';
+  @Input() subtitle: any = '';
 
   constructor() {  }
 

@@ -29,10 +29,10 @@ export class VehiclesListContainerComponent implements OnInit, AfterViewInit {
     this.qtVehicles.next(this.vehicles.length);
   }
 
-  handleEditClick(vehicleId: number){
+  handleEditClick(vehicleId: string){
     this.router.navigateByUrl(`/vehicles/edit/${vehicleId}`);
   }
 
-  handleRemoveClick(vehicleId: number){}
+  handleRemoveClick(vehicleId: string){}
 
 }

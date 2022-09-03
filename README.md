@@ -6,6 +6,8 @@ O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado 
 
 # Endereço de Deploy - GitHub Pages
 
+https://brunopapait.github.io/gerenciamento-colecao-veiculos/vehicles
+
 # Protótipo
 
 https://www.figma.com/file/PgmZ38i2pZfmEfD6lj2LHf/MEUSVEICULOS?node-id=0%3A1

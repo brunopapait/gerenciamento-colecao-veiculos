@@ -6,6 +6,8 @@ O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado 
 
 # Endereço de Deploy - GitHub Pages
 
+https://brunopapait.github.io/gerenciamento-colecao-veiculos/vehicles
+
 # Protótipo
 
 https://www.figma.com/file/PgmZ38i2pZfmEfD6lj2LHf/MEUSVEICULOS?node-id=0%3A1
@@ -28,5 +30,5 @@ https://www.figma.com/file/PgmZ38i2pZfmEfD6lj2LHf/MEUSVEICULOS?node-id=0%3A1
 - [x] Cadastrar uma entidade no JSON Server.
 - [x] Apresentar uma lista de dados com a diretiva estrutural ngFor.
 - [x] Usar a diretiva ngIf
-- [ ] Formatar a apresentação de dados com Pipes.
-- [ ] Build e deploy da aplicação.
+- [x] Formatar a apresentação de dados com Pipes.
+- [x] Build e deploy da aplicação.

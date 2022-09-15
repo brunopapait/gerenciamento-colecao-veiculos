@@ -8,19 +8,21 @@
           <span>{{vehicle.placa}}</span>
           <div class="wrapper-action-button">
             <img class="icon icon-edit" src="assets/edit.svg" alt="Botão de editar veículo"
-              (click)="handleEditClick(+vehicle.id)">
+              (click)="handleEditClick(vehicle.id)">
             <img class="icon" src="assets/trash.svg" alt="Botão de remover veículo"
-              (click)="handleRemoveClick(+vehicle.id)">
+              (click)="handleRemoveClick(vehicle)">
           </div>
         </div>
         <div class="half-container">
           <app-vehicle-item-detail [title]="'MODELO'" [subtitle]="vehicle.modelo"></app-vehicle-item-detail>
           <app-vehicle-item-detail [title]="'MARCA'" [subtitle]="vehicle.marca"></app-vehicle-item-detail>
           <app-vehicle-item-detail [title]="'COR'" [subtitle]="vehicle.cor"></app-vehicle-item-detail>
-          <app-vehicle-item-detail [title]="'VALOR'" [subtitle]="vehicle.valor"></app-vehicle-item-detail>
+          <app-vehicle-item-detail [title]="'VALOR'" [subtitle]="vehicle.valor | currency : 'R$'">
+          </app-vehicle-item-detail>
         </div>
         <div class="half-container">
-          <app-vehicle-item-detail [title]="'KM ATUAL'" [subtitle]="vehicle.kmAtual"></app-vehicle-item-detail>
+          <app-vehicle-item-detail [title]="'KM ATUAL'" [subtitle]="vehicle.kmAtual.toLocaleString('pt-BR')">
+          </app-vehicle-item-detail>
           <app-vehicle-item-detail [title]="'ANO FABRICAÇÃO'" [subtitle]="vehicle.anoFabricacao">
           </app-vehicle-item-detail>
           <app-vehicle-item-detail [title]="'ANO MODELO'" [subtitle]="vehicle.anoModelo"></app-vehicle-item-detail>

@@ -13,7 +13,6 @@ export class HeaderComponent implements OnInit {
     this.secondNameHeader = 'Veiculos';
    }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

@@ -7,10 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CountVehiclesComponent implements OnInit {
   @Input() qtVehicles: number = 0;
-  constructor() {
-  }
+  constructor() { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { }
 }

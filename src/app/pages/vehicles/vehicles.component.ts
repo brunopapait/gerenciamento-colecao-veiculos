@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-vehicles',
@@ -7,10 +7,8 @@ import { Component, OnInit, Output } from '@angular/core';
 })
 export class VehiclesComponent implements OnInit {
   qtVehicles: number = 0;
-  constructor() {
-  }
+  constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }
